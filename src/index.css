@@ -1,0 +1,80 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Space Grotesk", sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+
+  --color-electric-blue: #00d2ff;
+  --color-brand-blue: #0052cc;
+  --color-brand-neon: #0066ff;
+  
+  --animate-pulse-slow: pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  --animate-float: float 6s ease-in-out infinite;
+  --animate-grid-fade: grid-fade 20s linear infinite;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #000000;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1f2937;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #0066ff;
+}
+
+/* Custom utility classes */
+.text-glow {
+  text-shadow: 0 0 20px rgba(0, 102, 255, 0.4);
+}
+
+.box-glow {
+  box-shadow: 0 0 30px rgba(0, 102, 255, 0.15);
+}
+
+.box-glow-strong {
+  box-shadow: 0 0 40px rgba(0, 102, 255, 0.35);
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.glass-card:hover {
+  border: 1px solid rgba(59, 130, 246, 0.3);
+  box-shadow: 0 0 25px rgba(59, 130, 246, 0.1);
+}
+
+.dark-grid-bg {
+  background-image: 
+    linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+.blue-grid-bg {
+  background-image: 
+    linear-gradient(to right, rgba(0, 102, 255, 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(0, 102, 255, 0.05) 1px, transparent 1px);
+  background-size: 60px 60px;
+}
